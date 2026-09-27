@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(10, 5, 8, 0.92),
+            rgba(10, 5, 8, 0.96)
+        );
+
+    color: #eeeeee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    background: #151114;
+
+    border: 1px solid #54202b;
+
+    border-radius: 15px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+h1 {
+    color: #a83d50;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 32px;
+}
+
+h2 {
+    color: #c05a6d;
+
+    margin-top: 25px;
+
+    margin-bottom: 12px;
+}
+
+p {
+    color: #cccccc;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+ul {
+    margin-left: 25px;
+
+    color: #cccccc;
+
+    line-height: 1.8;
+}
+
+label {
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    color: #d9a3ad;
+
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    border: 1px solid #4d2931;
+
+    background: #0e0b0d;
+
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #8f3549;
+}
+
+button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #722638;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #8d3045;
+
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}

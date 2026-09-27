@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario SErvidor RP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+       
+        <section id="tela1" class="tela ativa">
+
+            <h1>NSMP</h1>
+
+            <h2>Bem-vindos ao nosso servidor!</h2>
+
+            <p>
+                Aqui começa uma nova historia.
+                Nosso servidor foi criado para proporcionar
+                uma experiencia boa, foca em rp e outras coisas
+            </p>
+
+            <h2>
+                loreeeeeeeeeeeeeeeeee
+            </h2>
+
+            <p>Aqui você poderá colocar a história do mundo,
+                explicar como ele surgiu, quais são seus povos,
+                conflitos, reinos e acontecimentos importantes.
+            </p>
+
+            <h2>REGRAS DO SERVIDOR</h2>
+
+            <ul>
+                <li>Respeitas todos os participantes.</li>
+                <li>Respeitar a história e o personagem dos outros jogadores.</li>
+                <li>Evitar atitudes que prejudiquem a experiencia do RP.</li>
+                <li>Seguir as regras do servidor.</li>
+                <li>Seguir as regras do servidor.</li>
+                <li> Não utilizar informações de fora do rp para benificiar seu personagem</li>
+            </ul>
+
+            <h2>Como criar a lore?</h2>
+
+            <p>Pense na história do seu personagem.
+                De onde ele veio? O que ele deseja?
+                Quais acontecimentos marcaram sua vida?
+                Quais são seus objetivos dentro do mundo?</p>
+
+            <button type="button" onclick="
+    document.getElementById('tela1').classList.remove('ativa');
+    document.getElementById('tela2').classList.add('ativa');
+">
+    Continuar
+</button>
+        </section>
+
+        <section id="tela2" class="tela">
+
+            <p>Queremos conhecer um pouco mais sobre você
+                antes de conhecer seu personagem.</p>
+
+                <form id="formulario"
+                action="https://formspree.io/f/xljezrrj"
+                method="post">
+
+                    <label for="nome">Nome</label>
+
+                    <input type="text" 
+                    id="nome" 
+                    name="nome" 
+                    required>
+
+                    <label for="idade">Idade</label>
+                    <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    min="15"
+                    required>
+
+                    <label for="conheceu">Como conheceu o servidor?</label>
+
+                    <textarea id="conheceu"
+                    name="como_conheceu"
+                    required></textarea>
+
+                    <label for="rp">Oque vc gosta de fazer em um RP?</label>
+
+                    <textarea id="rp"
+
+                    name="o_que_gosta_no_rp"
+                    placeholder="Ex: gosto de construir, explorar, participar de conflitos, focar na história..."
+                    required></textarea>
+
+                    <label for="minecraft">
+                        Como vc gosta de jogar Minecraft?
+                    </label>
+
+                    <select
+                    id="minecraft"
+                    name="estilo_minecraft"
+                    required>
+
+                    <option value="">Selecione uma opção</option>
+
+                    
+                    <option value="Build">
+                        Build / Construção
+                    </option>
+
+                    <option value="Mods">
+                        Mods
+                    </option>
+
+                    <option value="Exploração">
+                        Exploração
+                    </option>
+
+                    <option value="RP">
+                        Foco em RP
+                    </option>
+
+                    <option value="Redstone">
+                        Redstone / Automação
+                    </option>
+
+                    <option value="Misto">
+                        Um pouco de tudo
+                    </option>
+
+                </select>
+
+
+                <label for="sobre">
+                    Fale um pouco sobre você
+                </label>
+
+                <textarea
+                    id="sobre"
+                    name="sobre"
+                    required
+                ></textarea>
+
+         <button type="button" onclick="
+    document.getElementById('tela2').classList.remove('ativa');
+    document.getElementById('tela3').classList.add('ativa');
+">
+    Continuar para personagem
+</button>
+
+            
+        </section>
+
+        
+        <section id="tela3" class="tela">
+
+            <form id="FormularioPersonagem"
+            action=""
+            method="post>"
+
+            <h1>PERSONAGEM</h1>
+
+            <p>Agora queremos conhecer o personagem
+                que você pretende trazer para o nosso mundo.</p>
+
+                <label for="nomePersonagem">Nome do personagem</label>
+
+                <input type="text"
+                id="nomePersonagem"
+                name="nome_personagem"
+                required>
+
+                <label for="idadePersonagem">Idade do personagem</label>
+
+                <input type="number"
+                id="idadePersonagem"
+                name="idade_personagem"
+                required>
+
+                <label for="especie">
+                Espécie
+            </label>
+
+            <input
+                type="text"
+                id="especie"
+                name="especie"
+                placeholder="Ex: Humano, Elfo, Anão..."
+                required
+            >
+
+
+            <label for="fisico">
+                Descrição física
+            </label>
+
+            <textarea
+                id="fisico"
+                name="descricao_fisica"
+                placeholder="Descreva a aparência do personagem..."
+                required
+            ></textarea>
+
+
+            <label for="personalidade">
+                Descrição da personalidade
+            </label>
+
+            <textarea
+                id="personalidade"
+                name="personalidade"
+                placeholder="Como ele age? Quais são seus medos, desejos e características?"
+                required
+            ></textarea>
+
+
+            <label for="lore">
+                Lore do personagem
+            </label>
+
+            <textarea
+                id="lore"
+                name="lore"
+                placeholder="Conte a história do seu personagem..."
+                required
+            ></textarea>
+
+
+            <button type="submit" onclick="
+    document.getElementById('tela3').classList.remove('ativa');
+    document.getElementById('tela4').classList.add('ativa');
+">
+    Finalizar inscrição
+</button>
+
+
+        </section>
+ 
+        <section id="tela4" class="tela">
+
+            <h1>Obrigado!</h1>
+
+            <p>
+                Agradecemos por você ter dedicado um tempo
+                para preencher nossa inscrição.
+            </p>
+
+            <p>
+                Agora nossa equipe irá analisar as informações
+                enviadas.
+            </p>
+
+            <p>
+                Em breve anunciaremos quem foi selecionado
+                para participar do servidor.
+            </p>
+
+            <h2>Boa sorte! ❤️</h2>
+
+            </form>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
